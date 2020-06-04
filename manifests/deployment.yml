@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: azurevotefrontdevops 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: azurevotefrontdevops 
+    spec:
+      containers:
+        - name: azurevotefrontdevops 
+          image: acrsea.azurecr.io/azurevotefrontdevops
+          ports:
+          - containerPort: 80
